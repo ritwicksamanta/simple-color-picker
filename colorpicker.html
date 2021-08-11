@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Picker</title>
+    <style>
+        body{
+            background-color: #97bfaa;
+            color: #000000;
+        }
+        input[type=number]{
+            width: 120px;
+            margin-top: 10px;
+            border-radius: 30px;
+        }
+        .container{
+            margin: 10%;
+        }
+        button{
+            width: 110px;
+            padding: 10px;
+        }
+        #idColorBox{
+            margin-top: 50px;
+            margin-left: 50px;
+            width: 100px;
+            height: 90px;
+            border: black transparent  medium;
+            padding: 25%;
+            text-align: center;
+            background-color: #000000;
+            font-style: italic;
+            font-weight: bolder;
+        }
+        #btnGreen, #btnBlue{
+            margin-left: 30px;
+        }
+        button,.btn{
+            background-color: #000000;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form id="frm" onsubmit="return false;">
+            <h1>Color Picker</h1><button hidden></button>
+            <div class="btnContainer">
+                <span class="red">&nbsp;<button id="btnRed" name="red">Red</button></span>
+                <span class="green">&nbsp;<button id="btnGreen" name="green">Green</button></span>
+                <span class="blue">&nbsp;<button id="btnBlue" name="blue">Blue</button></span>
+            </div>
+            <div class="textContainer">
+                <span class="red">&nbsp;<input type="number" id="textRed" min="0" max="255"></span>
+                <span class="green">&nbsp;<input type="number" id="textGreen" min="0" max="255"></span>
+                <span class="blue">&nbsp;<input type="number" id="textBlue" min="0" max="255" ></span>
+            </div>
+            <br/>
+            <div id="idColorBox"></div>
+        </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="colorPicker.js"></script>
+</body>
+</html>
